@@ -12,6 +12,7 @@ struct CellularAutomataApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            
         }
     }
 }

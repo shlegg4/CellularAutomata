@@ -11,15 +11,21 @@
 		5A3C44BF27675FAC00118AD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C44BE27675FAC00118AD7 /* ContentView.swift */; };
 		5A3C44C127675FAD00118AD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3C44C027675FAD00118AD7 /* Assets.xcassets */; };
 		5A3C44C427675FAD00118AD7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3C44C327675FAD00118AD7 /* Preview Assets.xcassets */; };
+		5A3C44CC2767619800118AD7 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C44CB2767619800118AD7 /* GridView.swift */; };
+		5A3C44D12768981B00118AD7 /* ApplyRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C44D02768981B00118AD7 /* ApplyRule.swift */; };
+		5A3C44D32768988300118AD7 /* Rules.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C44D22768988300118AD7 /* Rules.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5A3C44B927675FAC00118AD7 /* CellularAutomata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellularAutomata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3C44BC27675FAC00118AD7 /* CellularAutomataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellularAutomataApp.swift; sourceTree = "<group>"; };
-		5A3C44BE27675FAC00118AD7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5A3C44BE27675FAC00118AD7 /* ContentView.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5A3C44C027675FAD00118AD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A3C44C327675FAD00118AD7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5A3C44C527675FAD00118AD7 /* CellularAutomata.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CellularAutomata.entitlements; sourceTree = "<group>"; };
+		5A3C44CB2767619800118AD7 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		5A3C44D02768981B00118AD7 /* ApplyRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyRule.swift; sourceTree = "<group>"; };
+		5A3C44D22768988300118AD7 /* Rules.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Rules.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				5A3C44BC27675FAC00118AD7 /* CellularAutomataApp.swift */,
+				5A3C44CB2767619800118AD7 /* GridView.swift */,
 				5A3C44BE27675FAC00118AD7 /* ContentView.swift */,
+				5A3C44D02768981B00118AD7 /* ApplyRule.swift */,
+				5A3C44D22768988300118AD7 /* Rules.metal */,
 				5A3C44C027675FAD00118AD7 /* Assets.xcassets */,
 				5A3C44C527675FAD00118AD7 /* CellularAutomata.entitlements */,
 				5A3C44C227675FAD00118AD7 /* Preview Content */,
@@ -101,6 +110,7 @@
 				TargetAttributes = {
 					5A3C44B827675FAC00118AD7 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 				};
 			};
@@ -139,7 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3C44D12768981B00118AD7 /* ApplyRule.swift in Sources */,
 				5A3C44BF27675FAC00118AD7 /* ContentView.swift in Sources */,
+				5A3C44CC2767619800118AD7 /* GridView.swift in Sources */,
+				5A3C44D32768988300118AD7 /* Rules.metal in Sources */,
 				5A3C44BD27675FAC00118AD7 /* CellularAutomataApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +280,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CellularAutomata/CellularAutomata.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -285,6 +299,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Slegg.CellularAutomata;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CellularAutomata-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -294,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CellularAutomata/CellularAutomata.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -312,6 +329,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Slegg.CellularAutomata;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CellularAutomata-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
